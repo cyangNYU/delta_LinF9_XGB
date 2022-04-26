@@ -78,7 +78,7 @@ XGB (in pK) :  6.182
 
 
 
-### Reference
+### References
 
 1. Chao Yang and Yingkai Zhang. *J. Chem. Inf. Model.*, **61**, 4630 - 4644, (2021).
 
