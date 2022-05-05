@@ -12,7 +12,7 @@ In script/runXGB.py, you can modify the path based on your case.
 
 All the softwares are available in delta_LinF9_XGB/software directory, except for MGLTools and MSMS.
 
-(MGLTools can be downloaded at http://mgltools.scripps.edu/downloads)
+(MGLTools can be downloaded at https://ccsb.scripps.edu/mgltools/downloads/)
 
 ```python
 Vina = '/home/cyang/paper_XGB/delta_LinF9_XGB/software/smina_feature'
