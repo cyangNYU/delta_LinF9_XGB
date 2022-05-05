@@ -34,6 +34,8 @@ cp msms.x86_64Linux2.2.6.1 msms
 
 In msms folder, there is a script pdb_to_xyzr. Change the line numfile="./atmtypenumbers" to be numfile="YourPATH/delta_LinF9_XGB/software/atmtypenumbers". The updated atmtypenumbers file can be found in delta_LinF9_XGB/software directory.
 
+In script/featureSASA.py, change the msmsdir="/home/cyang/paper_XGB/delta_LinF9_XGB/software/msms/" to msmsdir="{YourPath}/delta_LinF9_XGB/software/msms/"
+
 ##### 2. Required python packages
 
 If encounter the error of python module not found, check if the below python packages have successfully installed. (try "pip install " or "conda install -c conda-forge ")
