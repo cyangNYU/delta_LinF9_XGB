@@ -10,7 +10,7 @@
 
 In script/runXGB.py, you can modify the path based on your case.
 
-All the softwares are available in delta_LinF9_XGB/software directory, except for MGLTools.
+All the softwares are available in delta_LinF9_XGB/software directory, except for MGLTools and MSMS.
 
 (MGLTools can be downloaded at http://mgltools.scripps.edu/downloads)
 
@@ -22,9 +22,17 @@ ADT = '/home/cyang/MGLTools-1.5.6/MGLToolsPckgs/AutoDockTools/Utilities24/prepar
 model_dir = '/home/cyang/paper_XGB/delta_LinF9_XGB/saved_model'
 ```
 
- <https://github.com/cyangNYU/delta_LinF9_XGB>
+(MSMS can be downloaded at https://ccsb.scripps.edu/msms/downloads/)
 
+```
+cd {YourPATH}/delta_LinF9_XGB/software/
+mkdir msms
+tar -zxvf msms_i86_64Linux2_2.6.1.tar.gz -C msms
+cd msms
+cp msms.x86_64Linux2.2.6.1 msms
+```
 
+In msms folder, there is a script pdb_to_xyzr. Change the line numfile="./atmtypenumbers" to be numfile="YourPATH/delta_LinF9_XGB/software/atmtypenumbers". The updated atmtypenumbers file can be found in delta_LinF9_XGB/software directory.
 
 ##### 2. Required python packages
 
