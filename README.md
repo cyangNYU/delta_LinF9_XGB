@@ -41,12 +41,11 @@ In script/featureSASA.py, change the msmsdir="/home/cyang/paper_XGB/delta_LinF9_
 If encounter the error of python module not found, check if the below python packages have successfully installed. (try "pip install " or "conda install -c conda-forge ")
 
 ```
-pandas
-scipy
-rdkit
-xgboost
-pickle
-openbabel
+pandas==1.3.0
+scipy==1.5.3
+rdkit==2020.09.5
+xgboost==1.2.0
+openbabel==3.1.0
 mdtraj
 alphaspace2
 ```
@@ -68,18 +67,18 @@ pip install -e ./
 
 ##### 1. Try examples with script/runXGB.py
 
-In test directory, there are several prepared subdirectories (in JG98, 1e66_dry, 1e66_wat) can be used as examples. 
+In test directory, there are several prepared subdirectories (e.g. 1e66_dry, 1e66_wat) can be used as examples. 
 
-For example, in test/JG98 subdirectory, there are two pdb files: protein_ATP.pdb (receptor) and JG98.pdb (ligand), as inputs to calculate the delta_LinF9_XGB score.
+For example, in test/1e66_wat subdirectory, there are two pdb files: 1e66_protein.pdb (receptor with water molecules) and 1e66_ligand.mol2 (ligand), as inputs to calculate the delta_LinF9_XGB score.
 
 ```shell
-python script/runXGB.py test/JG98/protein_ATP.pdb test/JG98/JG98.pdb | grep 'XGB'
+python script/runXGB.py test/1e66_wat/1e66_protein.pdb test/1e66_wat/1e66_ligand.mol2 | grep 'XGB'
 ```
 
 The output can be:
 
 ```shell
-XGB (in pK) :  6.182
+XGB (in pK) :  8.893
 ```
 
 
@@ -90,33 +89,23 @@ XGB (in pK) :  6.182
 
 ### References
 
-1. Chao Yang and Yingkai Zhang. *J. Chem. Inf. Model.*, **61**, 4630 - 4644, (2021).
+1. Chao Yang and Yingkai Zhang. *J. Chem. Inf. Model.*, **62**, , (2022).
+
+   [Delta Machine Learning to Improve Scoring-Ranking-Screening Performances of Protein–Ligand Scoring Functions.](http://dx.doi.org/10.1021/acs.jcim.2c00485)
+
+2. Chao Yang and Yingkai Zhang. *J. Chem. Inf. Model.*, **61**, 4630 - 4644, (2021).
 
    [Lin_F9: A Linear Empirical Scoring Function for Protein–Ligand Docking.](http://dx.doi.org/10.1021/acs.jcim.1c00737)
 
-2. Katigbak Joseph, Haotian Li, David Rooklin, and Yingkai Zhang. *J. Chem. Inf. Model.*, **61**, 4630 - 4644, (2021).
+3. Katigbak Joseph, Haotian Li, David Rooklin, and Yingkai Zhang. *J. Chem. Inf. Model.*, **61**, 4630 - 4644, (2021).
 
    [AlphaSpace 2.0: Representing Concave Biomolecular Surfaces Using β-Clusters.](https://doi.org/10.1021/acs.jcim.9b00652)
 
-3. Lu Jianing, Xuben Hou, Cheng Wang, and Yingkai Zhang. *J. Chem. Inf. Model.*, **59**, 4540 - 4549, (2019).
+4. Lu Jianing, Xuben Hou, Cheng Wang, and Yingkai Zhang. *J. Chem. Inf. Model.*, **59**, 4540 - 4549, (2019).
 
    [Incorporating explicit water molecules and ligand conformation stability in machine-learning scoring functions.](https://doi.org/10.1021/acs.jcim.9b00645)
 
-4. Wang Cheng and Yingkai Zhang. *J. Comput. Chem.*, **38**, 169 - 177, (2017). 
+5. Wang Cheng and Yingkai Zhang. *J. Comput. Chem.*, **38**, 169 - 177, (2017). 
 
    [Improving scoring‐docking‐screening powers of protein–ligand scoring functions using random forest.](https://doi.org/10.1002/jcc.24667)
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
 
